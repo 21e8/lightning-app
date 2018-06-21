@@ -32,6 +32,7 @@ import PayBitcoin from '../src/view/pay-bitcoin';
 import PayBitcoinConfirm from '../src/view/pay-bitcoin-confirm';
 import PayBitcoinDone from '../src/view/pay-bitcoin-done';
 import Loader from '../src/view/loader';
+import LoaderSyncing from '../src/view/loader-syncing';
 import SeedSuccess from '../src/view/seed-success';
 import Seed from '../src/view/seed';
 import SeedVerify from '../src/view/seed-verify';
@@ -81,6 +82,7 @@ storiesOf('Screens', module)
   .add('New Address', () => (
     <NewAddress store={store} nav={nav} invoice={invoice} />
   ))
+  .add('Loader - Syncing Chain', () => <LoaderSyncing />)
   .add('Home', () => (
     <Home
       store={store}
