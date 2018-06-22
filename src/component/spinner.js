@@ -1,5 +1,10 @@
 import React from 'react';
-import { ActivityIndicator, StyleSheet, View } from 'react-native';
+import {
+  ActivityIndicator,
+  StyleSheet,
+  View,
+  ViewPropTypes,
+} from 'react-native';
 import PropTypes from 'prop-types';
 import { color, font } from './style';
 import Icon from '../component/icon';
@@ -105,7 +110,7 @@ const LoadNetworkGradient = () => (
 LoadNetworkSpinner.propTypes = {
   percentage: PropTypes.number.isRequired,
   msg: PropTypes.string.isRequired,
-  style: PropTypes.object,
+  style: ViewPropTypes.style,
 };
 
 const generateArc = (percentage, radius) => {

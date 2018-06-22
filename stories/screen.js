@@ -82,7 +82,7 @@ storiesOf('Screens', module)
   .add('New Address', () => (
     <NewAddress store={store} nav={nav} invoice={invoice} />
   ))
-  .add('Loader - Syncing Chain', () => <LoaderSyncing />)
+  .add('Loader - Syncing Chain', () => <LoaderSyncing store={store} />)
   .add('Home', () => (
     <Home
       store={store}
@@ -200,6 +200,7 @@ store.pendingChannels = [...Array(6)].map((x, i) => ({
   status: i % 2 === 0 ? 'pending-closing' : 'pending-open',
 }));
 store.selectedChannel = store.computedChannels && store.computedChannels[0];
+store.percentSynced = 30;
 store.seedMnemonic = [
   'empower',
   'neglect',
